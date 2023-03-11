@@ -28,10 +28,14 @@ jobs:
       - name: Update config
         run: |
           python3 validate_and_add.py "${{ inputs.path }}" "${{ inputs.url }}" --override ${{ inputs.override }}
-      - name: Commit & Push
+      - name: Commit
         run: |
-          git config --global user.email "github-actions[bot]@users.noreply.github.com" \
-          && git config --global user.name "github-actions[bot]" \
-          && git add vercel.json \
-          && git commit -m 's: edit "${{ inputs.path }}" redirect' \
-          && git push origin main
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git "add vercel.json" \
+          git commit -m 's: edit "${{ inputs.path }}" redirect'
+      - name: Push
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
