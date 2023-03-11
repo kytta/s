@@ -8,11 +8,9 @@ deployed to Vercel.
 
 [![Press me to edit redirects](https://img.shields.io/static/v1?label=&message=PRESS%20ME%20TO%20EDIT%20REDIRECTS&color=blue&style=for-the-badge)](https://github.com/kytta/s/actions/workflows/add_or_update.yml)
 
-## Install
+## Use
 
-```c
-// TODO
-```
+Clone this repo, remove vercel.json, and deploy it to your Vercel account.
 
 ## Licence
 
