@@ -1,0 +1,30 @@
+name: Add or update URL
+
+on:
+  workflow_dispatch:
+    inputs:
+      path:
+        description: "Path part of the shortened URL"
+        required: true
+        type: string
+      url:
+        description: 'URL to shorten. Type "delete" to remove URL.'
+        required: true
+        type: string
+      override:
+        description: "Override (or delete) the URL mapping if it exists. Will throw an error otherwise."
+        required: false
+        type: boolean
+
+jobs:
+  edit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Run
+        run: |
+          echo You're trying to redirect s.kytta.dev/${{ inputs.path }} -> ${{ ${{ inputs.url }}
+          echo Overriding: ${{ inputs.override }}
