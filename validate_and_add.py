@@ -26,7 +26,7 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     try:
         parts = urlparse(args.url)
-        if not (parts.scheme and parts.netloc):
+        if not (args.url == "delete" or (parts.scheme and parts.netloc)):
             raise ValueError()
     except ValueError:
         print(f"{args.url} is not a valid URL")
@@ -44,8 +44,11 @@ def main(argv: Sequence[str] | None = None) -> int:
         print("No redirects yet; creating...")
         current_config['redirects'] = []
 
-    for redirect in current_config['redirects']:
+    for idx, redirect in enumerate(current_config['redirects']):
         if redirect['source'] == args.path:
+            if args.url == "delete":
+                del current_config['redirects'][idx]
+                break
             if not args.override:
                 print(f"{args.path} exists, not overriding")
                 return 1
