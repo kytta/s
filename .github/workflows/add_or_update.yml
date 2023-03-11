@@ -34,4 +34,4 @@ jobs:
           && git config --global user.name "github-actions[bot]" \
           && git add vercel.json \
           && git commit -m 's: edit "${{ inputs.path }}" redirect' \
-          && git push origin master
+          && git push origin main
