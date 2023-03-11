@@ -3,10 +3,6 @@
 		{
 			"source": "/",
 			"destination": "https://github.com/kytta/s"
-		},
-		{
-			"source": "/hello",
-			"destination": "https://www.kytta.dev/"
 		}
 	]
 }
