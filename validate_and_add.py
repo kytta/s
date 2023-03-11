@@ -10,9 +10,14 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("path")
     parser.add_argument("url")
-    parser.add_argument("--override", action="store_true")
+    parser.add_argument("--override", default="False")
 
     args = parser.parse_args(argv)
+
+    if args.override.lower() == "true":
+        args.override = True
+    else:
+        args.override = False
 
     if not args.path.startswith("/"):
         args.path = f"/{args.path}"

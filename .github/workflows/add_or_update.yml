@@ -26,5 +26,5 @@ jobs:
 
       - name: Run
         run: |
-          python3 validate_and_add "${{ inputs.path }}" "${{ inputs.url }}" ${{ inputs.override ? '--override' : '' }}
+          python3 validate_and_add "${{ inputs.path }}" "${{ inputs.url }}" --override ${{ inputs.override }}
           cat vercel.json
