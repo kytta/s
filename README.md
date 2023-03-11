@@ -6,6 +6,8 @@ s is a very laconic URL shortener. It is so laconic it doesn't have any source
 code. It uses GitHub Actions to add or delete URL mappings which then get
 deployed to Vercel.
 
+[![Press me to edit redirects](https://img.shields.io/static/v1?label=&message=PRESS%20ME%20TO%20EDIT%20REDIRECTS&color=blue&style=for-the-badge)](https://github.com/kytta/s/actions/workflows/add_or_update.yml)
+
 ## Install
 
 ```c
