@@ -26,5 +26,4 @@ jobs:
 
       - name: Run
         run: |
-          echo You're trying to redirect s.kytta.dev/${{ inputs.path }} -> ${{ inputs.url }}
-          echo Overriding: ${{ inputs.override }}
+          python3 validate_and_add "${{ inputs.path }}" "${{ inputs.url }}" ${{ inputs.override ? '--override' : '' }}
