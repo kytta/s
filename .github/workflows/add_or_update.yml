@@ -26,5 +26,5 @@ jobs:
 
       - name: Run
         run: |
-          echo You're trying to redirect s.kytta.dev/${{ inputs.path }} -> ${{ ${{ inputs.url }}
+          echo You're trying to redirect s.kytta.dev/${{ inputs.path }} -> ${{ inputs.url }}
           echo Overriding: ${{ inputs.override }}
