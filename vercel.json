@@ -7,6 +7,38 @@
 		{
 			"source": "/parcel-talk",
 			"destination": "https://drive.google.com/open?id=1il5cFKOJ1bWKBmy3JWDiI7FlPGSyxv1e"
+		},
+		{
+			"source": "/pretty-money",
+			"destination": "https://os.kytta.dev/pretty-money/"
+		},
+		{
+			"source": "/vavilon-js-github",
+			"destination": "https://github.com/vavilon-js/vavilon.js"
+		},
+		{
+			"source": "/topconspects",
+			"destination": "https://conspects.karamoff.dev/"
+		},
+		{
+			"source": "/conspectsdrive",
+			"destination": "https://drive.google.com/open?id=1jW0Zohz-6LJv6IuJv0WahIczvrH2B-KF"
+		},
+		{
+			"source": "/playmarketpage",
+			"destination": "https://play.google.com/store/apps/dev?id=6049327680578943072"
+		},
+		{
+			"source": "/onesparkler",
+			"destination": "https://www.youtube.com/watch?v=AWOGD4tl0U0"
+		},
+		{
+			"source": "/arithmaster",
+			"destination": "https://play.google.com/store/apps/details?id=ru.karamoff.kawan_kawan.arithmaster"
+		},
+		{
+			"source": "/bussow",
+			"destination": "https://www.bussow.ru/"
 		}
 	]
 }
