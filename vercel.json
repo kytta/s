@@ -39,6 +39,10 @@
 		{
 			"source": "/bussow",
 			"destination": "https://www.bussow.ru/"
+		},
+		{
+			"source": "/fedi",
+			"destination": "https://fosstodon.org/@kytta"
 		}
 	]
 }
