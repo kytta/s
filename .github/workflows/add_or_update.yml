@@ -19,6 +19,7 @@ on:
 jobs:
   edit:
     runs-on: ubuntu-latest
+    name: Redirect ${{ inputs.path }}
 
     steps:
       - name: Checkout
