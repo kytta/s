@@ -43,6 +43,10 @@
 		{
 			"source": "/fedi",
 			"destination": "https://fosstodon.org/@kytta"
+		},
+		{
+			"source": "/openpgp",
+			"destination": "https://keys.openpgp.org/vks/v1/by-fingerprint/AF6C280C2A34D3F39BED9366D397E9BE9E6898FA"
 		}
 	]
 }
