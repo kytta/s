@@ -17,7 +17,7 @@ Clone this repo, remove vercel.json, and deploy it to your Vercel account.
 © 2023 [Nikita Karamov]\
 Code licensed under the [ISC License].
 
----
+______________________________________________________________________
 
 This project is hosted on GitHub:
 <https://github.com/kytta/s.git>
