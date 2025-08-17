@@ -3,7 +3,7 @@ ci:
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       - id: end-of-file-fixer
       - id: fix-byte-order-marker
@@ -16,12 +16,9 @@ repos:
       - id: check-builtin-literals
       - id: check-docstring-first
       - id: debug-statements
-      - id: fix-encoding-pragma
-        args: [--remove]
   - repo: https://github.com/pre-commit/pygrep-hooks
     rev: v1.10.0
     hooks:
-      - id: rst-backticks
       - id: python-no-eval
       - id: python-no-log-warn
       - id: python-use-type-annotations
@@ -43,6 +40,8 @@ repos:
           - yaml
         args:
           - "--use-tabs"
+        additional_dependencies:
+          - "prettier@^3"
   - repo: https://github.com/executablebooks/mdformat
     rev: 0.7.22
     hooks:
@@ -67,10 +66,10 @@ repos:
       - id: pyupgrade
         args: [--py310-plus]
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: "v0.12.2"
+    rev: "v0.12.9"
     hooks:
       - id: ruff
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.16.1
+    rev: v1.17.1
     hooks:
       - id: mypy
