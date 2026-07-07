@@ -42,7 +42,7 @@
 		},
 		{
 			"source": "/fedi",
-			"destination": "https://fosstodon.org/@kytta"
+			"destination": "https://polymaths.social/@kytta"
 		},
 		{
 			"source": "/openpgp",
