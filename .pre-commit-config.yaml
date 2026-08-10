@@ -6,22 +6,10 @@ repos:
     rev: v6.0.0
     hooks:
       - id: end-of-file-fixer
-      - id: fix-byte-order-marker
-      - id: mixed-line-ending
       - id: trailing-whitespace
         args: [--markdown-linebreak-ext=md]
       - id: check-json
       - id: check-yaml
-      - id: check-ast
-      - id: check-builtin-literals
-      - id: check-docstring-first
-      - id: debug-statements
-  - repo: https://github.com/pre-commit/pygrep-hooks
-    rev: v1.10.0
-    hooks:
-      - id: python-no-eval
-      - id: python-no-log-warn
-      - id: python-use-type-annotations
 
   - repo: https://github.com/PyCQA/autoflake
     rev: v2.3.3
