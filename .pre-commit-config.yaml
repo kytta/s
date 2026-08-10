@@ -11,10 +11,6 @@ repos:
       - id: check-json
       - id: check-yaml
 
-  - repo: https://github.com/PyCQA/autoflake
-    rev: v2.3.3
-    hooks:
-      - id: autoflake
   - repo: https://github.com/hhatto/autopep8
     rev: v2.3.2
     hooks:
