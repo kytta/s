@@ -21,8 +21,7 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     if not args.path.startswith("/"):
         args.path = f"/{args.path}"
-    if args.path.endswith("/"):
-        args.path = args.path[:-1]
+    args.path = args.path.removesuffix("/")
 
     try:
         parts = urlparse(args.url)
