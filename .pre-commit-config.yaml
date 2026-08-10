@@ -22,11 +22,9 @@ repos:
         language: node
         additional_dependencies: ["prettier@^3.9.0"]
         entry: prettier --write --ignore-unknown
-        types_or:
-          - json
+        types:
+          - text
           - yaml
-        args:
-          - "--use-tabs"
   - repo: https://github.com/executablebooks/mdformat
     rev: 1.0.0
     hooks:
