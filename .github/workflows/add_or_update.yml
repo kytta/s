@@ -20,22 +20,26 @@ jobs:
   edit:
     runs-on: ubuntu-latest
     name: Redirect ${{ inputs.path }}
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Update config
-        run: |
-          python3 validate_and_add.py "${{ inputs.path }}" "${{ inputs.url }}" --override ${{ inputs.override }}
+        run: python3 validate_and_add.py "$INPUT_PATH" "$INPUT_URL" --override "$INPUT_OVERRIDE"
+        env:
+          INPUT_PATH: ${{ inputs.path }}
+          INPUT_URL: ${{ inputs.url }}
+          INPUT_OVERRIDE: ${{ inputs.override }}
       - name: Commit
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add "vercel.json"
-          git commit -m 's: edit "${{ inputs.path }}" redirect'
+          git commit -m 's: edit "$INPUT_PATH" redirect'
+        env:
+          INPUT_PATH: ${{ inputs.path }}
       - name: Push
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+        run: git push origin HEAD:refs/heads/main
