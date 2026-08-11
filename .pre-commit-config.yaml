@@ -21,14 +21,6 @@ repos:
         types:
           - text
           - yaml
-  - repo: https://github.com/executablebooks/mdformat
-    rev: 1.0.0
-    hooks:
-      - id: mdformat
-        additional_dependencies:
-          - mdformat-gfm
-          - mdformat-frontmatter
-          - mdformat-footnote
 
   - repo: https://github.com/asottile/reorder-python-imports
     rev: v3.16.0
