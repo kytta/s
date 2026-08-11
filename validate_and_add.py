@@ -41,23 +41,25 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     if "redirects" not in current_config:
         print("No redirects yet; creating...")
-        current_config['redirects'] = []
+        current_config["redirects"] = []
 
-    for idx, redirect in enumerate(current_config['redirects']):
-        if redirect['source'] == args.path:
+    for idx, redirect in enumerate(current_config["redirects"]):
+        if redirect["source"] == args.path:
             if args.url == "delete":
-                del current_config['redirects'][idx]
+                del current_config["redirects"][idx]
                 break
             if not args.override:
                 print(f"{args.path} exists, not overriding")
                 return 1
-            redirect['destination'] = args.url
+            redirect["destination"] = args.url
             break
     else:
-        current_config['redirects'].append({
-            "source": args.path,
-            "destination": args.url,
-        })
+        current_config["redirects"].append(
+            {
+                "source": args.path,
+                "destination": args.url,
+            }
+        )
 
     with vercel_json.open("w") as fp:
         json.dump(current_config, fp, indent="\t")

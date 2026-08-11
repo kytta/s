@@ -11,10 +11,6 @@ repos:
       - id: check-json
       - id: check-yaml
 
-  - repo: https://github.com/hhatto/autopep8
-    rev: v2.3.2
-    hooks:
-      - id: autopep8
   - repo: local
     hooks:
       - id: prettier
@@ -39,10 +35,6 @@ repos:
     hooks:
       - id: reorder-python-imports
         args: [--py310-plus]
-  - repo: https://github.com/asottile/add-trailing-comma
-    rev: v4.0.0
-    hooks:
-      - id: add-trailing-comma
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: "v0.16.2"
     hooks:
@@ -51,3 +43,7 @@ repos:
           - --target-version=py310
           - --fix
           - --exit-non-zero-on-fix
+      - id: ruff-format
+        args:
+          - --target-version=py310
+          - --line-length=79
